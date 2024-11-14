@@ -9,11 +9,15 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  constructor(private httpClient: HttpClient) { }
-
   BASIC_URL = environment.apiUrl;
+
+  constructor(private httpClient: HttpClient) { }
 
   public saveEmployee(employee: Employee): Observable<Employee> {
     return this.httpClient.post<Employee>(`${this.BASIC_URL}/add/employee`, employee);
+  }
+
+  public getEmployees(): Observable<Employee[]>{
+    return this.httpClient.get<Employee[]>(`${this.BASIC_URL}/get/employee`);
   }
 }

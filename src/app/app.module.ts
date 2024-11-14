@@ -19,13 +19,16 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    EmployeeListComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +44,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     MatRadioModule,
     MatCheckboxModule,
     MatDividerModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   providers: [
     provideAnimationsAsync()

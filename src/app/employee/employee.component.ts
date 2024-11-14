@@ -10,6 +10,7 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrl: './employee.component.css'
 })
 export class EmployeeComponent implements OnInit {
+[x: string]: any;
 
   employee: Employee = {
     employeeId: 0,
