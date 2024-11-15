@@ -4,6 +4,10 @@
         <button mat-stroked-button color="primary" class="mt-3" routerLink="/employee-list">Employee List</button>
     </div>
 
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+
     <div class="card p-5 mt-2">
 
         <form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
@@ -87,7 +91,7 @@
                     <mat-checkbox (change)="onSkillsChanges($event)" value="Spring Boot" class="example-margin"
                         [checked]="checkSkills('Spring Boot')">Spring
                         Boot</mat-checkbox>
-                    <mat-checkbox (change)="onSkillsChanges($event)" value="AW" class="example-margin"
+                    <mat-checkbox (change)="onSkillsChanges($event)" value="AWS" class="example-margin"
                         [checked]="checkSkills('AWS')">AWS</mat-checkbox>
                 </section>
             </div>
